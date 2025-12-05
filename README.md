@@ -1,5 +1,5 @@
 # What?
-This repo contains my (attempted) solutions for [Advent of Code](https://adventofcode.com/), a yearly collection of coding challenges written by Eric Wastl.
+This repo contains my (attempted) solutions for [Advent of Code](https://adventofcode.com/) 2025, a yearly collection of coding challenges written by Eric Wastl.
 
 # Which langauge?
 There are two langauges that I have experience with: [Python](https://www.python.org/) and [Fortran](https://fortran-lang.org/). Python is a very widely used, incredibly flexible language with all sorts of libraries and packages to solve almost any problem. Fortran is a high-performance language used by people who need to do difficult maths *fast*. The natural choice for a language to use for Advent of Code would be Python, so I'm doing it in Fortran.
