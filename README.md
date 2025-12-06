@@ -26,3 +26,5 @@ One of the things that is much easier in Fortran than Python is parallelism via 
 # How's it going?
 ### 3pm, December 5, 2025
 I haven't started yet. I started my PhD a few months ago and it has been *busy*. I have just set up my repo, so hopefully I'll get to start in the next few days.
+### 5:45pm, December 6, 2025
+Officially started! Day 1, part 1 done. Started setting up the helper functions, so a bit slow to begin with.
