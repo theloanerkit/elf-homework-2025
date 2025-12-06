@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if [[ $2 -eq 1]];
+if [[ $2 -eq 1 ]];
+then
 	# run with test inputs
 	cd test_inputs
 else
@@ -16,8 +17,10 @@ cd ..
 cd fortran
 
 # now compile the fortran
+gfortran -c "read.f90"
+gfortran -c "string.f90"
 gfortran -c "$1.f90"
-gfortran "$1".o -o "$1".out
+gfortran "read.o" "string.o" "$1".o -o "$1".out
 
 # now run
 ./"$1".out
