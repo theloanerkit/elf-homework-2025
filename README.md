@@ -28,3 +28,5 @@ One of the things that is much easier in Fortran than Python is parallelism via 
 I haven't started yet. I started my PhD a few months ago and it has been *busy*. I have just set up my repo, so hopefully I'll get to start in the next few days.
 ### 5:45pm, December 6, 2025
 Officially started! Day 1, part 1 done. Started setting up the helper functions, so a bit slow to begin with.
+### 11:05am, December 7, 2025
+Day 1, part 2 done. That took too long. The perils of hoping half-assing it will work out. I started by trying to just extend my part 1 solution with a few bodges and an attempt to fix double counting. Evidently this did not work. Spent several hours going further into the spiral of trying to make modular arithmetic and integer division work before giving up and rewriting the entire thing.
