@@ -20,8 +20,9 @@ cd fortran
 gfortran -c "constants.f90"
 gfortran -c -fcheck=all -Wall -fbacktrace -g "read.f90"
 gfortran -c -fcheck=all -Wall -fbacktrace -g "string.f90"
+gfortran -c -fcheck=all -Wall -fbacktrace -g "grid.f90"
 gfortran -c -fcheck=all -Wall -fbacktrace -g "$1.f90"
-gfortran "constants.o" "read.o" "string.o" "$1".o -o "$1".out
+gfortran "constants.o" "read.o" "string.o" "grid.o" "$1".o -o "$1".out
 
 # now run
 ./"$1".out

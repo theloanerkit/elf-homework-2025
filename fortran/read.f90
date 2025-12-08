@@ -22,4 +22,16 @@ module read
         end do
     end subroutine read_character
 
+    subroutine read_character_grid(input,io)
+        character :: input(:,:)
+        character(len=(size(input(1,:)))) :: str
+        integer :: i, j, io
+        do i=1,size(input,dim=1)
+            read(io,'(A)') str
+            do j=1,size(input,dim=2)
+                input(i,j) = str(j:j)
+            end do
+        end do
+    end subroutine read_character_grid
+
 end module read

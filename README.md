@@ -40,3 +40,5 @@ Tidied up day 2's code slightly. I enjoyed part 2 (I should have seen it coming 
 On a roll. This was the fastest one so far, `maxloc` was the mvp here. I have made an attempt at guessing the part 2 twist, and I will probably be wrong.
 ### 12:20pm, December 8, 2025
 Ok I guessed the twist :). Had to change the size of my ints (and fix one line that didn't work but didn't matter for part 1) but that was basically it.
+### 1:40pm, December 8, 2025
+Definitely getting back into the rhythm of AoC. Day 4, part 1 done. Another module added, with some functionality I'm sure will come in handy later.
