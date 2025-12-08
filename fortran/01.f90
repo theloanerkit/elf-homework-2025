@@ -1,6 +1,6 @@
 program secret_entrance
     use read, only : read_dimensions, read_file
-    use string, only : string_to_int
+    use string, only : string_to
     implicit none
     integer :: file_len,line_len,io
     character(len=2) :: day = "01"
@@ -33,7 +33,7 @@ program secret_entrance
         do i=1,file_len
             temp = dial
             dirn = input(i)(1:1)
-            dist = string_to_int(trim(input(i)(2:)))
+            call string_to(trim(input(i)(2:)),dist)
             select case (dirn)
                 case ("L")
                     dial = dial - dist
