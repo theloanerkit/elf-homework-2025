@@ -18,7 +18,7 @@ module read
         integer          :: i, io
 
         do i=1,size(input)
-            read(io,*) input(i)
+            read(io,'(A)') input(i)
         end do
     end subroutine read_character
 

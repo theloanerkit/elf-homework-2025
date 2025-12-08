@@ -17,10 +17,11 @@ cd ..
 cd fortran
 
 # now compile the fortran
-gfortran -c "read.f90"
-gfortran -c "string.f90"
-gfortran -c "$1.f90"
-gfortran "read.o" "string.o" "$1".o -o "$1".out
+gfortran -c "constants.f90"
+gfortran -c -fcheck=all -Wall -fbacktrace -g "read.f90"
+gfortran -c -fcheck=all -Wall -fbacktrace -g "string.f90"
+gfortran -c -fcheck=all -Wall -fbacktrace -g "$1.f90"
+gfortran "constants.o" "read.o" "string.o" "$1".o -o "$1".out
 
 # now run
 ./"$1".out
