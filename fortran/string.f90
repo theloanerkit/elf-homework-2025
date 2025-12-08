@@ -9,6 +9,7 @@ module string
         module procedure string_to_list
         module procedure string_to_int_list
         module procedure string_to_int_list_16
+        module procedure string_to_digit_list
     end interface string_to
 
     contains
@@ -100,6 +101,17 @@ module string
         end do
         deallocate(tmp)        
     end subroutine string_to_int_list
+
+    subroutine string_to_digit_list(str,list)
+        character(len=*) :: str
+        integer,allocatable :: list(:)
+        integer :: i,tmp(1)
+        allocate(list(len(str)),source=0)
+        do i=1,len(str)
+            tmp = findloc(digits,str(i:i))
+            list(i) = tmp(1)-1
+        end do
+    end subroutine string_to_digit_list
 
     subroutine string_to_int_list_16(str,list,sep)
         character :: sep
