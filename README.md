@@ -32,3 +32,5 @@ Officially started! Day 1, part 1 done. Started setting up the helper functions,
 Day 1, part 2 done. That took too long. The perils of hoping half-assing it will work out. I started by trying to just extend my part 1 solution with a few bodges and an attempt to fix double counting. Evidently this did not work. Spent several hours going further into the spiral of trying to make modular arithmetic and integer division work before giving up and rewriting the entire thing.
 ### 8:20am, December 8, 2025
 Day 2, part 1 done. I started this on the train yesterday and spend *a while* breaking my string conversion functions. Such things do happen when you do AoC in a language like Fortran. Otherwise, I really enjoyed this puzzle. I considered brute-forcing it and checking every number, but in the end I settled on iterating through *half* of the number and concatenating the two together to generate the numbers to check. I did spend a while using $\left\lceil\log_{10}(x)\right\rceil$ when I should have been using $\left\lfloor\log_{10}(x)\right\rfloor+1$ though.
+#### 9:45am, December 8, 2025
+Day 2, part 2 done. I'll tidy up the code and write about it later.
