@@ -1,4 +1,5 @@
 program lobby
+    use constants
     use read, only : read_dimensions, read_file
     use string, only : string_to
     implicit none
@@ -14,29 +15,34 @@ program lobby
 
     subroutine main()
         character(len=line_len) :: input(file_len)
-        integer :: output_joltage
+        integer(kind=int_16) :: output_joltage_p1,output_joltage_p2
         call read_file(input,io)
         close(io)
 
-        call part_one(input,output_joltage)
-        print*,"the total output joltage is",output_joltage
+        call part_one_and_two(input,output_joltage_p1,output_joltage_p2)
+        print*,"the total output joltage is",output_joltage_p1
+        print*,"the actual total output joltage is",output_joltage_p2
     end subroutine main
 
-    subroutine part_one(input,output_joltage)
+    subroutine part_one_and_two(input,output_joltage_p1,output_joltage_p2)
         character(len=line_len) :: input(file_len)
-        integer :: output_joltage,i
+        integer(kind=int_16) :: output_joltage_p1,output_joltage_p2
+        integer :: i
         integer,allocatable :: battery_bank(:)
-        output_joltage = 0
+        output_joltage_p1 = 0
+        output_joltage_p2 = 0
         do i=1,file_len ! iterate over battery banks
             call string_to(input(i),battery_bank)
-            output_joltage = output_joltage + maximum_joltage(battery_bank,2)
+            output_joltage_p1 = output_joltage_p1 + maximum_joltage(battery_bank,2)
+            output_joltage_p2 = output_joltage_p2 + maximum_joltage(battery_bank,12)
             deallocate(battery_bank)
         end do
-    end subroutine part_one
+    end subroutine part_one_and_two
 
     function maximum_joltage(battery_bank,battery_count)
         integer,allocatable :: battery_bank(:)
-        integer :: battery_count,maximum_joltage,i,idx(1),tmp,on,start
+        integer(kind=int_16) :: maximum_joltage
+        integer :: battery_count,i,idx(1),tmp,on,start
         maximum_joltage = 0
         on = 0
         start = 0
@@ -50,13 +56,9 @@ program lobby
             end do
             maximum_joltage = maximum_joltage*10
             maximum_joltage = maximum_joltage + battery_bank(tmp)
-            start = idx(1)
+            start = tmp 
             on = on + 1
         end do
     end function maximum_joltage
-
-    subroutine part_two()
-
-    end subroutine part_two
 
 end program lobby

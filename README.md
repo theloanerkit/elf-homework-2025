@@ -38,3 +38,5 @@ Day 2, part 2 done. I'll tidy up the code and write about it later.
 Tidied up day 2's code slightly. I enjoyed part 2 (I should have seen it coming lol). My code for this part is definitley messy, lots of conditionals and checking specific cases separately that could *probably* be generalised. But I can't be bothered to fix it, it works.
 ### 12:15pm, December 8, 2025
 On a roll. This was the fastest one so far, `maxloc` was the mvp here. I have made an attempt at guessing the part 2 twist, and I will probably be wrong.
+### 12:20pm, December 8, 2025
+Ok I guessed the twist :). Had to change the size of my ints (and fix one line that didn't work but didn't matter for part 1) but that was basically it.
